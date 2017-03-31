@@ -45,6 +45,11 @@ class Configuration implements ConfigurationInterface
                     ->useAttributeAsKey('name', false)
                     ->prototype('scalar')->end()
                 ->end()
+                ->arrayNode('curl_opts_http_header')
+                    ->defaultValue(array())
+                    ->useAttributeAsKey('key', false)
+                    ->prototype('scalar')->end()
+                ->end()
             ->end()
         ->end();
 
